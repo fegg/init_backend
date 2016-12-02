@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="" lang="zh-cn"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name=viewport content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="bookmark" href="/favicon.ico" type="image/x-icon"　/>
+
+    <link rel="stylesheet" href="@@rootPath/css/bs/bootstrap.css">
+    <link rel="stylesheet" href="@@rootPath/css/bs/bootstrap-theme.css">
+    <link rel="stylesheet" href="@@rootPath/css/bs/bootstrap-table.css">
+
+    <link rel="stylesheet" href="@@rootPath/css/ui.css">
+    <link rel="stylesheet" href="@@rootPath/css/index.css">
+    <link rel="stylesheet" href="@@rootPath/css/other.css">
+</head>
+<body>
+    <div class="bd">
+        
+        @@include('inc.html')
+        @@include('table.html')
+
+    </div>
+
+    <script src="@@rootPath/js/lib/jquery.js"></script>
+    <script src="@@rootPath/js/lib/template-native.js"></script>
+    <script src="@@rootPath/js/lib/dialog.js"></script>
+
+    <script src="@@rootPath/js/bs/bootstrap.js"></script>
+    <script src="@@rootPath/js/bs/bootstrap-table.js"></script>
+    <script src="@@rootPath/js/bs/bootstrap-table-zh-CN.js"></script>
+
+    <script src="@@rootPath/js/bs-common.js"></script>
+
+    <script>
+    (function () {
+        $('#table').bootstrapTable({
+            columns: [{
+                field: 'id',
+                title: 'Item ID'
+            }, {
+                field: 'name',
+                title: 'Item Name'
+            }, {
+                field: 'price',
+                title: 'Item Price'
+            }],
+            data: [{
+                id: 1,
+                name: 'Item 1',
+                price: '$1'
+            }, {
+                id: 2,
+                name: 'Item 2',
+                price: '$2'
+            }]
+        });
+    } ());
+    </script>
+</body>
+</html>
